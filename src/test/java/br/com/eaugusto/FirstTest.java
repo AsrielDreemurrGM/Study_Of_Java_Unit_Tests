@@ -1,3 +1,5 @@
+package br.com.eaugusto;
+
 import org.junit.Assert;
 import org.junit.Test;
 
