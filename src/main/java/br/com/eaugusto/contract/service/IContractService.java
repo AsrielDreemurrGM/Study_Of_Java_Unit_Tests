@@ -6,5 +6,11 @@ package br.com.eaugusto.contract.service;
  */
 public interface IContractService {
 
-	public String save();
+	String save();
+
+	String delete(String id);
+
+	String edit(String id, String newData);
+
+	String search(String id);
 }

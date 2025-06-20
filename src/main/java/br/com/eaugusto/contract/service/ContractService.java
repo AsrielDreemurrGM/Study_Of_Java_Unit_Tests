@@ -19,4 +19,22 @@ public class ContractService implements IContractService {
 		contractDAO.save();
 		return "Success";
 	}
+
+	@Override
+	public String delete(String id) {
+		contractDAO.delete(id);
+		return "Deleted";
+	}
+
+	@Override
+	public String edit(String id, String newData) {
+		contractDAO.edit(id, newData);
+		return "Edited";
+	}
+
+	@Override
+	public String search(String id) {
+		String result = contractDAO.search(id);
+		return result != null ? result : "Not Found";
+	}
 }
