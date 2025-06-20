@@ -1,41 +1,53 @@
 <h1>Study Of Java Unit Tests</h1>
 <p>
   Repository focused on the study and practice of Java unit testing using the <strong>JUnit 5</strong> framework.<br />
-  Includes simple examples, assertions, class validation, and integration with code coverage tools like EclEmma.
+  Includes practical examples of assertions, layered architecture with services and DAOs, and integration with code coverage tools like EclEmma.
+  Made using Spring Tools Suite 4.
 </p>
 <h2>🔍 Covered Concepts</h2>
 <ul>
   <li>Project structure for unit testing (<code>src/main/java</code> and <code>src/test/java</code>);</li>
   <li>Basic unit tests using <code>assertEquals</code> and <code>assertNotEquals</code>;</li>
-  <li>Test classes simulating real-world entities (like <code>Client</code>);</li>
+  <li>Tests for business logic through service and DAO abstraction layers;</li>
+  <li>Use of <code>Mock</code> implementations to simulate success and failure scenarios;</li>
   <li>Filtering logic validation through unit tests (<code>FilterByGenderTest</code>);</li>
   <li>Code coverage analysis using EclEmma plugin (Eclipse);</li>
   <li>Javadoc and inline comments included for clarity.</li>
 </ul>
 <h2>🗂️ Project Structure</h2>
 <ul>
-  <li><code>br.com.eaugusto</code>: Base package containing the <code>ClientTest</code> class and its test counterpart;</li>
-  <li><code>br.com.eaugusto.coursetask</code>: Contains the <code>Person</code> class and the <code>FilterByGender</code> logic, as well as its corresponding test class.</li>
+  <li><code>br.com.eaugusto</code>: Contains <code>ClientTest</code> and its unit test <code>TestClientTest</code>;</li>
+  <li><code>br.com.eaugusto.coursetask</code>: Contains <code>Person</code>, <code>FilterByGender</code>, and related tests;</li>
+  <li><code>br.com.eaugusto.mocks.dao</code> / <code>service</code>: DAO and service layer interfaces and mock implementations for <code>Client</code> testing;</li>
+  <li><code>br.com.eaugusto.mockstests.service</code>: Unit tests for client service behavior (success/failure);</li>
+  <li><code>br.com.eaugusto.contract.dao</code> / <code>service</code>: Interface definitions and mock/realistic DAO implementations for <code>Contract</code> logic;</li>
+  <li><code>br.com.eaugusto.contracttests</code>: Contains <code>ContractServiceTest</code>, testing all contract-related functionality.</li>
 </ul>
 <h2>🚀 How to Run</h2>
 <ol>
   <li>Clone this repository;</li>
   <li>Import into an IDE that supports JUnit 5 (e.g., Eclipse with EclEmma, IntelliJ);</li>
-  <li>Right-click test classes (e.g., <code>FirstTest</code>, <code>TestClientTest</code>, <code>FilterByGenderTest</code>) and run them as JUnit tests;</li>
-  <li>Use EclEmma to view code coverage and validate test effectiveness.</li>
+  <li>Run test classes (e.g., <code>FirstTest</code>, <code>TestClientTest</code>, <code>ClientServiceTest</code>, <code>ContractServiceTest</code>);</li>
+  <li>Use EclEmma to verify test coverage and validate implementation.</li>
 </ol>
 <h2>📅 Commit Highlights</h2>
 <h3>June 20, 2025</h3>
 <ul>
-  <li>Created <code>FilterByGenderTest</code> to verify correct filtering of a list of people by gender.</li>
-  <li>Implemented <code>FilterByGender</code> and <code>Person</code> classes in the <code>coursetask</code> package with simple parsing logic.</li>
-  <li>Developed <code>ClientTest</code> and <code>TestClientTest</code> to simulate and test a basic data class, organized under the main/test packages.</li>
-  <li>Set up the project for testing with JUnit 5 and created the initial <code>FirstTest</code> with basic assertions.</li>
+  <li>Added search, delete, and edit methods to <code>ContractService</code>, with full unit test coverage.</li>
+  <li>Created service and DAO layers for <code>Contract</code>, including mock and exception-based implementations.</li>
+  <li>Developed <code>ClientService</code> and corresponding unit tests with dependency injection and mock DAO use.</li>
+</ul>
+<h3>June 19, 2025</h3>
+<ul>
+  <li>Added <code>FilterByGenderTest</code> to check gender-based filtering accuracy;</li>
+  <li>Created <code>FilterByGender</code> and <code>Person</code> in the <code>coursetask</code> package with parsing logic;</li>
+  <li>Implemented <code>ClientTest</code> and <code>TestClientTest</code> with basic structure and coverage;</li>
+  <li>Initialized the project with <code>FirstTest</code> and integrated JUnit 5 and EclEmma.</li>
 </ul>
 <h2>📚 Learning Goals</h2>
 <ul>
-  <li>Understand the structure of Java projects with unit testing in place;</li>
-  <li>Learn how to write meaningful assertions and interpret test results;</li>
-  <li>Get started with test coverage tools to measure how well your code is tested;</li>
-  <li>Apply unit testing to real-world-like business logic, such as filtering operations.</li>
+  <li>Understand and structure Java projects with unit testing and test source folders;</li>
+  <li>Learn to write assertions using JUnit 5 and analyze code behavior through testing;</li>
+  <li>Practice service and DAO patterns with mock implementations and exception handling;</li>
+  <li>Use test coverage tools to ensure testing effectiveness and code reliability.</li>
 </ul>
