@@ -1,6 +1,12 @@
 package br.com.eaugusto.contract.dao;
 
 /**
+ * Fallback contract DAO implementation that throws errors for all operations.
+ * <p>
+ * This class is used to simulate a real DAO that is not yet connected to a
+ * database. All operations throw {@code UnsupportedOperationException}.
+ * </p>
+ * 
  * @author Eduardo Augusto (github.com/AsrielDreemurrGM/)
  * @since Jun 20, 2025
  */

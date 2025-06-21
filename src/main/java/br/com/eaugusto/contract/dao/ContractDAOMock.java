@@ -4,6 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Mock DAO implementation for contracts using in-memory storage.
+ * <p>
+ * Provides basic in-memory CRUD behavior using a {@code HashMap}. Suitable for
+ * use in unit testing.
+ * </p>
+ * 
  * @author Eduardo Augusto (github.com/AsrielDreemurrGM/)
  * @since Jun 20, 2025
  */
